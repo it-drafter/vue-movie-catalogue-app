@@ -11,6 +11,7 @@ In this mini-project, I used:
 - Firebase Realtime Database to store the data
 - some Bootstrap styling
 
+This app is very similar to [the one](https://github.com/it-drafter/react-post-app) I build in REACT. Same logic - different tool.
 ## Demo
 
 You can try it out [HERE](http://drafter.atwebpages.com/vue-movie-catalogue-app/).
