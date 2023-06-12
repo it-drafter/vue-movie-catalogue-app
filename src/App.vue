@@ -1,6 +1,6 @@
 <script setup>
-import { ref, onMounted } from "vue";
-import Movies from "./components/Movies.vue";
+import { ref, onMounted } from 'vue';
+import Movies from './components/Movies.vue';
 
 const movies = ref({});
 const loading = ref(false);
@@ -9,14 +9,14 @@ const deleted = ref(false);
 const error = ref(false);
 const delError = ref(false);
 const addError = ref(false);
-const info = ref("");
+const info = ref('');
 const btnAddMovieClicked = ref(false);
-const title = ref("");
-const releaseDate = ref("");
-const director = ref("");
+const title = ref('');
+const releaseDate = ref('');
+const director = ref('');
 
 const url =
-  "https://vue-movies-app-aa461-default-rtdb.europe-west1.firebasedatabase.app/movie.json";
+  'https://vue-movies-app-aa461-default-rtdb.europe-west1.firebasedatabase.app/movie.json';
 
 onMounted(() => {
   handleLoadMovies();
@@ -32,7 +32,7 @@ async function handleLoadMovies() {
   try {
     const response = await fetch(url);
     if (!response.ok) {
-      throw new Error("Something went wrong!");
+      throw new Error('Something went wrong!');
     }
     const data = await response.json();
     movies.value = data;
@@ -64,26 +64,26 @@ async function handleAddMovie() {
   };
 
   const postMetod = {
-    method: "POST",
+    method: 'POST',
     body: JSON.stringify(movie),
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
   };
 
   try {
     const response = await fetch(url, postMetod);
     if (!response.ok) {
-      throw new Error("Something went wrong!");
+      throw new Error('Something went wrong!');
     }
     const data = await response.json();
     handleLoadMovies();
     added.value = true;
     info.value = movie.title;
 
-    title.value = "";
-    releaseDate.value = "";
-    director.value = "";
+    title.value = '';
+    releaseDate.value = '';
+    director.value = '';
     btnAddMovieClicked.value = false;
   } catch (err) {
     loading.value = false;
@@ -97,16 +97,16 @@ async function deleteAllMoviesHandler() {
   addError.value = false;
 
   const delMethod = {
-    method: "DELETE",
+    method: 'DELETE',
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
   };
 
   try {
     const response = await fetch(url, delMethod);
     if (!response.ok) {
-      throw new Error("Something went wrong!");
+      throw new Error('Something went wrong!');
     }
     const data = await response.json();
     handleLoadMovies();
@@ -166,7 +166,7 @@ const focusEventHandler = function () {
         </p>
         <p v-else-if="added" class="d-inline text-secondary">
           &nbsp; Successfully added movie:
-          {{ info || "[Movie title not entered!]" }}
+          {{ info || '[Movie title not entered!]' }}
         </p>
         <br />
 
@@ -196,14 +196,14 @@ const focusEventHandler = function () {
     <p v-else class="text-danger">No movies found.</p>
 
     <footer class="footer">
-      <p>Coded by drafter</p>
+      <p>Coded by it-drafter</p>
       <p>December 2022.</p>
     </footer>
   </div>
 </template>
 
 <style scoped>
-@import "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css";
+@import 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css';
 
 .loading {
   visibility: hidden;
