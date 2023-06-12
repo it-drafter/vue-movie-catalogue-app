@@ -3,6 +3,7 @@
 This is a basic movie catalogue app built with Vue.
 
 In this mini-project, I used:
+
 - Composition API
 - ref, onMounted
 - v-bind, v-if, v-for
@@ -12,9 +13,10 @@ In this mini-project, I used:
 - some Bootstrap styling
 
 This app is very similar to [the one](https://github.com/it-drafter/react-post-app) I build in REACT. Same logic - different tool.
+
 ## Demo
 
-You can try it out [HERE](http://drafter.atwebpages.com/vue-movie-catalogue-app/).
+You can try it out [HERE](https://it-drafter.github.io/vue-movie-catalogue-app/).
 
 ## Run Locally
 
