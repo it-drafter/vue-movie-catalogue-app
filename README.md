@@ -12,7 +12,7 @@ In this mini-project, I used:
 - Firebase Realtime Database to store the data
 - some Bootstrap styling
 
-This app is very similar to [the one](https://github.com/it-drafter/react-post-app) I build in REACT. Same logic - different tool.
+This app is very similar to [the one I build in REACT](https://github.com/it-drafter/react-post-app). Same logic - different tool.
 
 ## Demo
 
